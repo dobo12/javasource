@@ -11,17 +11,17 @@ public class OperatorEx1 {
         System.out.println(i);
 
         int j = 10;
-        ++j; 
+        ++j;
         System.out.println(j);
 
-        int k=5, l=0;
+        int k = 5, l = 0;
         l = k++; // l=k; k++
-        System.out.println("l=k++; 실행 후 , k=" + k", l=" + 1); // k=6, l=5
+        System.out.println("l=k++; 실행 후 , k=" + k + ", 1=" + 1);
 
         k = 5;
         l = 0;
         l = ++k; // l=k; k++
-        System.out.println("1 = k++; 실행 후 , k=" + k", l=" + 1);//  k=6, l=5
-        
+        System.out.println("1 = k++; 실행 후 , k=" + k + ", 1=" + 1);// k=6, l=5
+
     }
 }

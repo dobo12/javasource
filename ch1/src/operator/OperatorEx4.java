@@ -23,6 +23,8 @@ public class OperatorEx4 {
         System.out.println('a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z');
 
         boolean result = 'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z';
+        // !true => false / !false => true
+        System.out.println(!result); // false
 
     }
 }
