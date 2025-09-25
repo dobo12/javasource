@@ -1,0 +1,29 @@
+package control;
+
+import java.util.Scanner;
+
+public class WhileEx2 {
+    public static void main(String[] args) {
+        // 숫자를 입력받아 각 자리의 합 구하기
+        // 345 : 3+4+5=12
+        // 12345 : 1+2+3+4+5=15
+        Scanner sc = new Scanner(System.in);
+        System.out.print("숫자를 입력하세요 (12345) >>");
+        int num = Integer.parseInt(sc.nextLine());
+
+        int sum = 0;
+        // num 이 아닐때까지 반복
+        while (num != 0) {
+
+        }
+        // 123
+        while (num != 0) {
+            // 123
+            sum = sum + num % 10;
+            System.out.println("sum = %3d num = %d/n ,sum,");
+            num = num / 10;
+        }
+        System.out.println("각 자릿 수 합" + sum);
+
+    }
+}
