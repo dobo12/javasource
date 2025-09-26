@@ -39,5 +39,7 @@ public class ForEx1 {
             sum += i;
         }
         System.out.println("1~10까지의 합" + sum);
+
+        // for (;;) { 안에 수식어도 없을수도 있다}
     }
 }
