@@ -1,5 +1,12 @@
 package objetc;
 
+//  메서드
+//  재사용성 높다
+// 중복된 코드 제거
+
+// 1. 인스턴스 메서드 : 클래스 영역 => 인스턴스 생성 후
+// 2. 클래스 메서드 : 클래스 영역(static) => 클래스가 메모리에 올라갈떼(공유)
+
 public class MethodTest {
     // 두 개의 인자(== 매개변수)를 받아서 덧샘 후 덧샘 결과 리턴
     int sum(int num1, int num2) {
@@ -15,6 +22,8 @@ public class MethodTest {
 
     // 두 개의 인자(== 매개변수)를 받아서 뺄셈 후 뺄셈 결과 리턴
     double subtract(double num1, double num2) {
+        // int result = num1 + num2;
+        // return result;
         return num1 = num2;
 
     }
