@@ -1,0 +1,46 @@
+관계
+1.상속(is-a)관계
+2.포함(has-a)관계 : 한 클래스를 작성하는데 다른 클래스를 멤버변수로 선언
+
+원(Circle)은 점(Point)이다.
+원(Circle)은 점(Point)을 가지고 있다.
+
+Car, SportsCar
+
+SportsCar는 Car이다.
+SportsCar는 Car를 가지고 있다.
+
+도형:Shape
+점:Point
+삼각형:Triangle
+원:Circle
+
+원은 도형이다(O)
+원은 도형을 가지고 있다
+
+삼각형은 도형이다.(O)
+삼각형은 도형을 가지고 있다
+
+삼각형은 점이다
+삼각형은 점을 가지고 있다.(O)
+
+캡슐화(은닉) : private
+ class A {
+private String name;
+}
+
+public class B {
+A obj = new A()
+obj.name = 15; (x)
+account.balance = 1000000;
+
+}
+
+package == 폴더 == 클래스 여러개 묶음
+
+오버로딩 : 생성자 오버로딩 - 하나의 클래스의 동일한 이름으로 생성자가 여러개 존재
+           메서드 오버로딩 - 하나의 클래스의 동일한 이름으로 생성자가 여러개 존재
+           
+오버라이딩 : 상속에서 자식 클래스가 부모 메서드 재정의
+
+
