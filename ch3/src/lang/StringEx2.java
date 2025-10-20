@@ -1,0 +1,111 @@
+package lang;
+
+import java.util.Arrays;
+
+// String
+// mutable => immutable(변경불가)
+// StringBuffer, StringBulier
+public class StringEx2 {
+    public static void main(String[] args) {
+        // 1. concat() :다른 문자열 뒤에 덧붙이기
+        String str1 = "Hello";
+        String str2 = "World";
+        String str3 = str1 + str2;
+        System.out.println(str3);
+        // 리턴타입 존재 - 1) 출력문 2) 변수
+        System.out.println("concat()" + str1.concat(str2));
+
+        // 2) contains() : 문자열 포함 여부
+        // boolean result = str3.contains(str1);
+        // System.out.println(result);
+        if (str3.contains(str1)) {
+            System.out.println("str3 문자열에 str1 문자열이 포함됨");
+        } else {
+            System.out.println("str3 문자열에 str1 문자열에 포함되지 않음");
+        }
+
+        // 3) comparTo() : 문자열 사전순서로 비교
+        str1 = "aaa";
+        str2 = "bbb";
+        System.out.println("str1.comparTo(aaa)" + str1.compareTo("aaa")); // 0
+        System.out.println("str1.comparTo(str2)" + str1.compareTo(str2)); // -1
+        System.out.println("str1.comparTo(str1)" + str2.compareTo(str1)); // 1
+
+        // 4) endsWith() : 지정된 문자열로 끝나는지 검사
+        String fileName = "filld.txt";
+        if (fileName.endsWith("txt")) {
+            System.out.println("텍스트 파일");
+        } else {
+            System.out.println("텍스트 파일 아님");
+        }
+        // 5) equals() : 문자열 비교, equalsIgnoreCase() : 대소문자 구별 없이 비교
+        System.out.println("aaa".equals("cccc"));
+        System.out.println("aaa".equalsIgnoreCase("AAA"));
+        // 6) indexOf(문자) : 문자열에서 문자의 위치값 리턴
+        // indexOf(문자,찾을 시작 위치) : 문자열에서 문자의 위치값 리턴
+        str1 = "Hello";
+        System.out.println("str1.indexOf('e')" + str1.indexOf('e'));
+        System.out.println("str1.indexOf('k')" + str1.indexOf('k')); // -1 (못찾으면)
+        System.out.println("str1.indexOf('e', 2)" + str1.indexOf('e', 2)); // -1
+        System.out.println("str1.indexOf('e', 2)" + str1.indexOf("el")); // 1
+
+        // 7) lastindexof()
+        str1 = "java.lang.object";
+        System.out.println("str.lastindexof('.')" + str1.lastIndexOf('.')); // 9
+        System.out.println("str.indexof('.')" + str1.indexOf('.')); // 4
+
+        // 8) length() : 문자열 길이 반환
+        int arr[] = { 3, 4, 5, 6 };
+        for (int i = 0; i < arr.length; i++) {
+        }
+
+        // CharSequence target
+        // 9) replace()
+        str1 = "Hello";
+        System.out.println(str1.replace('H', 'K'));
+        System.out.println("Hellollo".replace("ll", "LL")); // 전체 변경
+        // regex : 정규식
+        System.out.println("Hellollo".replaceAll("ll", "LL")); // 전체 변경
+        System.out.println("Hellollo".replaceFirst("ll", "LL")); // 첫번째만 변경
+
+        // 10) split()
+        String animals = "dog,cat,bear";
+        String[] arr2 = animals.split(",");
+        System.out.println(arr2); // [Ljava.lang.String;@38af3868]
+        System.out.println(Arrays.toString(arr2)); // [dog, cat, bear]
+        for (String s : arr2) {
+            System.out.println(s);
+        }
+
+        String[] arr3 = animals.split(",", 2);
+        for (String s : arr3) {
+            System.out.println(s);
+
+        }
+        // starsWith(prefix) : 주어진 문자열 prefix로 시작하는지 검사 <--> endsWith()
+        str1 = "java.lang.Objrct";
+        System.out.println("str1.startsWith(\"lang\")" + str1.startsWith("lang"));
+        System.out.println("str1.startsWith(\"lang\")" + str1.startsWith("lang"));
+        System.out.println("str1.startsWith(\"lang\")" + str1.startsWith("lang", 5));
+
+        // 12) substring(beginindex) : 시작위치부터 문자열 얻어내기
+        // substring(beginindex,endindex) : 시작위치~끝위치까지 문자열 얻어내기(endindex 미포함)
+        System.out.println("str1.substring(10)" + str1.substring(10)); // object
+        System.out.println("str1.substring(5,9)" + str1.substring(5, 9)); // lang
+
+        // 13) toLowerCase() / tiUpperCase()
+        System.out.println("abcdefg".toUpperCase());
+        System.out.println("ABCDEFG".toLowerCase());
+
+        // 14) trim() : 양 끝에 존재하는 공백 제거(중간 제거 안해줌)
+        System.out.println("               Hello World".trim());
+        System.out.println("               Hello World          ".trim());
+        System.out.println("               Hello      World         ".trim());
+
+        // 15) valueOf(값) : 지정된 값을 문자열로 변환하여 변환
+        String str4 = String.valueOf(5);
+        int i = 3;
+        str4 = i + "";
+        str4 = String.valueOf(10.3f);
+    }
+}
